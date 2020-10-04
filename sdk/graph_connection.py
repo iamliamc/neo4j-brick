@@ -2,6 +2,7 @@ import pdb
 import py2neo
 from neo4j import GraphDatabase
 import logging
+from neo4j.exceptions import ClientError as neo4jException
 
 
 class TopologyGraphDriver:
@@ -21,7 +22,7 @@ class TopologyGraphDriver:
 
     def load_brick_ontology(self):
         with self.driver.session() as session:
-            session.run(self._load_brick_ontology)
+            session.write_transaction(self._load_brick_ontology)
 
     def is_brick_ontology_loaded(self):
         with self.driver.session() as session:
@@ -32,10 +33,13 @@ class TopologyGraphDriver:
             else:
                 return False
 
-    def enable_neosemantics_for_neo4j(self):
+    def get_brick_classes(self):
         with self.driver.session() as session:
-            graph_config = session.call(self._configure_graph)
+            return session.read_transaction(self._get_brick_classes)
 
+    def get_brick_relationships(self):
+        with self.driver.session() as session:
+            return session.read_transaction(self._get_brick_relationships) 
 
     def destroy_graph(self, require_cli_input=True):
         if require_cli_input:
@@ -47,12 +51,29 @@ class TopologyGraphDriver:
 
         self.logger.info(f"Deleting all graph entities...")
         with self.driver.session() as session:
-            results = session.run(self._destroy_graph)
+            results = session.write_transaction(self._destroy_graph)
             return results
     
-    @staticmethod
-    def _load_neosemantics_plugin_and_configure_graph():
-        pass
+    def initalize_neo4j_configuration(self):
+        enable_neosemantics = None
+        configure_graph = None 
+
+        try:
+            with self.driver.session() as session:
+                enable_neosemantics = session.write_transaction(self._create_neosemantics_constraint)
+        except neo4jException as e:
+            if e.title == 'EquivalentSchemaRuleAlreadyExists':
+                self.logger.info(f"Neosemantics Schema Rule Already Exists...")
+            else:
+                self.logger.error(e)
+
+        try:
+            with self.driver.session() as session:
+                configure_graph = session.write_transaction(self._create_graph_config)
+        except neo4jException as e:
+            self.logger.info(e.message)
+
+        return enable_neosemantics, configure_graph
 
     @staticmethod
     def _destroy_graph(tx):
@@ -61,12 +82,12 @@ class TopologyGraphDriver:
 
     @staticmethod
     def _get_brick_relationships(tx):
-        results = tx.run('MATCH(n:Resource:Relationship where n.uri CONTAINS "https://brickschema.org/schema/1.1/Brick#" RETURN n')
+        results = tx.run('MATCH(n:Resource:Relationship) WHERE n.uri CONTAINS "https://brickschema.org/schema/1.1/Brick#" RETURN n')
         return [record["n"] for record in results]
 
     @staticmethod
     def _get_brick_classes(tx):
-        results = tx.run('MATCH(n:Resource:Class where n.uri CONTAINS "https://brickschema.org/schema/1.1/Brick#" RETURN n')
+        results = tx.run('MATCH(n:Resource:Class) WHERE n.uri CONTAINS "https://brickschema.org/schema/1.1/Brick#" RETURN n')
         return [record["n"] for record in results]
 
     @staticmethod
@@ -82,12 +103,13 @@ class TopologyGraphDriver:
     @staticmethod
     def _create_neosemantics_constraint(tx):
         results = tx.run('CREATE CONSTRAINT n10s_unique_uri ON (r:Resource) ASSERT r.uri IS UNIQUE')
-        pdb.set_trace()
         return results
 
     @staticmethod
-    def _
-
+    def _create_graph_config(tx):
+        results = tx.run("CALL n10s.graphconfig.init({handleVocabUris: 'IGNORE'})")
+        return results
+        
     @staticmethod
     def _drop_graph_config(tx):
         results = tx.run('CALL n10s.graphconfig.drop')
