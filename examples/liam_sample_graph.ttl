@@ -1,0 +1,343 @@
+@prefix bldg: <https://example.com/customer_1/building_1#> .
+@prefix brick: <https://brickschema.org/schema/1.1.0/Brick#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+brick:TimeseriesUUID a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Tag .
+
+bldg:AHU_A a brick:Air_Handler_Unit ;
+    brick:feeds bldg:BLOCK_A .
+
+bldg:AHU_A.CALCULATED_SETPOINT a brick:Air_Temperature_Setpoint ;
+    brick:isMeasuredBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+bldg:AHU_A.CALCULATED_SETPOINT.X1 a brick:Outside_Air_Temperature_Low_Reset_Setpoint .
+
+bldg:AHU_A.CALCULATED_SETPOINT.X2 a brick:Outside_Air_Temperature_High_Reset_Setpoint .
+
+bldg:AHU_A.CALCULATED_SETPOINT.Y1 a brick:Supply_Air_Temperature_Low_Reset_Setpoint .
+
+bldg:AHU_A.CALCULATED_SETPOINT.Y2 a brick:Supply_Air_Temperature_High_Reset_Setpoint .
+
+bldg:AHU_A.FAN_COIL a brick:Fan_Coil_Unit .
+
+bldg:AHU_A_CALCULATED_SETPOINT brick:hasPoint bldg:AHU_A_CALCULATED_SETPOINT_X1,
+        bldg:AHU_A_CALCULATED_SETPOINT_X2,
+        bldg:AHU_A_CALCULATED_SETPOINT_Y1,
+        bldg:AHU_A_CALCULATED_SETPOINT_Y2 .
+
+bldg:BUILDING a brick:Building ;
+    brick:TimeseriesUUID "UUID-1" ;
+    brick:hasPart bldg:FLOOR_0,
+        bldg:FLOOR_1,
+        bldg:FLOOR_2,
+        bldg:FLOOR_3,
+        bldg:FLOOR_4,
+        bldg:FLOOR_5,
+        bldg:FLOOR_6,
+        bldg:FLOOR_7,
+        bldg:FLOOR_8 .
+
+bldg:PRIMARY_COLD_WATER a brick:Water_Distribution .
+
+bldg:VAV_A_0_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_0_0 .
+
+bldg:VAV_A_0_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_0_0.DPRPOS .
+
+bldg:VAV_A_0_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_0_1 .
+
+bldg:VAV_A_0_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_0_1.DPRPOS .
+
+bldg:VAV_A_0_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_0_2 .
+
+bldg:VAV_A_0_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_0_2.DPRPOS .
+
+bldg:VAV_A_1_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_1_0 .
+
+bldg:VAV_A_1_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_1_0.DPRPOS .
+
+bldg:VAV_A_1_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_1_1 .
+
+bldg:VAV_A_1_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_1_1.DPRPOS .
+
+bldg:VAV_A_1_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_1_2 .
+
+bldg:VAV_A_1_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_1_2.DPRPOS .
+
+bldg:VAV_A_2_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_2_0 .
+
+bldg:VAV_A_2_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_2_0.DPRPOS .
+
+bldg:VAV_A_2_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_2_1 .
+
+bldg:VAV_A_2_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_2_1.DPRPOS .
+
+bldg:VAV_A_2_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_2_2 .
+
+bldg:VAV_A_2_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_2_2.DPRPOS .
+
+bldg:VAV_A_3_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_3_0 .
+
+bldg:VAV_A_3_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_3_0.DPRPOS .
+
+bldg:VAV_A_3_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_3_1 .
+
+bldg:VAV_A_3_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_3_1.DPRPOS .
+
+bldg:VAV_A_3_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_3_2 .
+
+bldg:VAV_A_3_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_3_2.DPRPOS .
+
+bldg:VAV_A_4_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_4_0 .
+
+bldg:VAV_A_4_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_4_0.DPRPOS .
+
+bldg:VAV_A_4_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_4_1 .
+
+bldg:VAV_A_4_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_4_1.DPRPOS .
+
+bldg:VAV_A_4_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_4_2 .
+
+bldg:VAV_A_4_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_4_2.DPRPOS .
+
+bldg:VAV_A_5_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_5_0 .
+
+bldg:VAV_A_5_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_5_0.DPRPOS .
+
+bldg:VAV_A_5_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_5_1 .
+
+bldg:VAV_A_5_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_5_1.DPRPOS .
+
+bldg:VAV_A_5_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_5_2 .
+
+bldg:VAV_A_5_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_5_2.DPRPOS .
+
+bldg:VAV_A_6_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_6_0 .
+
+bldg:VAV_A_6_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_6_0.DPRPOS .
+
+bldg:VAV_A_6_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_6_1 .
+
+bldg:VAV_A_6_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_6_1.DPRPOS .
+
+bldg:VAV_A_6_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_6_2 .
+
+bldg:VAV_A_6_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_6_2.DPRPOS .
+
+bldg:VAV_A_7_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_7_0 .
+
+bldg:VAV_A_7_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_7_0.DPRPOS .
+
+bldg:VAV_A_7_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_7_1 .
+
+bldg:VAV_A_7_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_7_1.DPRPOS .
+
+bldg:VAV_A_7_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_7_2 .
+
+bldg:VAV_A_7_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_7_2.DPRPOS .
+
+bldg:VAV_A_8_0 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_8_0 .
+
+bldg:VAV_A_8_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_8_0.DPRPOS .
+
+bldg:VAV_A_8_1 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_8_1 .
+
+bldg:VAV_A_8_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_8_1.DPRPOS .
+
+bldg:VAV_A_8_2 a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_8_2 .
+
+bldg:VAV_A_8_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_8_2.DPRPOS .
+
+bldg:AHU_A.SUPPLY_TEMPERATURE a brick:Supply_Air_Temperature_Sensor .
+
+bldg:BLOCK_A a brick:Space .
+
+bldg:DISTRICT_HEATING a brick:Boiler ;
+    brick:feeds bldg:PRIMARY_HOT_WATER .
+
+bldg:FLOOR_0 a brick:Floor .
+
+bldg:FLOOR_1 a brick:Floor .
+
+bldg:FLOOR_2 a brick:Floor .
+
+bldg:FLOOR_3 a brick:Floor .
+
+bldg:FLOOR_4 a brick:Floor .
+
+bldg:FLOOR_5 a brick:Floor .
+
+bldg:FLOOR_6 a brick:Floor .
+
+bldg:FLOOR_7 a brick:Floor .
+
+bldg:FLOOR_8 a brick:Floor .
+
+bldg:HVAC_Zone_A_0_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_0_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_0_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_1_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_1_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_1_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_2_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_2_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_2_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_3_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_3_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_3_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_4_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_4_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_4_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_5_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_5_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_5_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_6_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_6_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_6_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_7_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_7_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_7_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_8_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_8_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_8_2 a brick:HVAC_Zone .
+
+bldg:PRIMARY_HOT_WATER a brick:Water_Distribution ;
+    brick:isFedBy bldg:DISTRICT_HEATING .
+
+bldg:VAV_A_0_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_0_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_0_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_1_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_1_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_1_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_2_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_2_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_2_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_3_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_3_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_3_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_4_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_4_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_4_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_5_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_5_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_5_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_6_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_6_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_6_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_7_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_7_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_7_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_8_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_8_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_8_2.DPRPOS a brick:Damper_Position_Setpoint .
+

@@ -1,0 +1,414 @@
+@prefix bldg: <customer_1/building_1/#> .
+@prefix brick: <https://brickschema.org/schema/1.1/Brick#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bldg:AHU_A.CALCULATED_SETPOINT.X1 a brick:Outside_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "265a67ed-9d6f-42bf-881b-e29f30adc258" .
+
+bldg:AHU_A.CALCULATED_SETPOINT.X2 a brick:Outside_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "fa4959ee-32c2-4ce7-a514-1d39bf288a71" .
+
+bldg:AHU_A.CALCULATED_SETPOINT.Y1 a brick:Supply_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "8ecffa81-9fb4-431b-8394-594033456df6" .
+
+bldg:AHU_A.CALCULATED_SETPOINT.Y2 a brick:Supply_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "5112c487-8a9f-44fa-9bf8-e7d390d8f613" .
+
+bldg:AHU_A.FAN_COIL a brick:Fan_Coil_Unit .
+
+bldg:AHU_A_CALCULATED_SETPOINT brick:hasPoint bldg:AHU_A_CALCULATED_SETPOINT_X1,
+        bldg:AHU_A_CALCULATED_SETPOINT_X2,
+        bldg:AHU_A_CALCULATED_SETPOINT_Y1,
+        bldg:AHU_A_CALCULATED_SETPOINT_Y2 .
+
+bldg:BUILDING.OAT a brick:Air_Temperature_Setpoint ;
+    brick:TimeseriesUUID "1dcfa6a5-9a68-49bd-981b-c5131a395010" .
+
+bldg:PRIMARY_COLD_WATER a brick:Water_Distribution .
+
+bldg:VAV_A_0_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_0_0.DPRPOS .
+
+bldg:VAV_A_0_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_0_1.DPRPOS .
+
+bldg:VAV_A_0_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_0_2.DPRPOS .
+
+bldg:VAV_A_1_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_1_0.DPRPOS .
+
+bldg:VAV_A_1_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_1_1.DPRPOS .
+
+bldg:VAV_A_1_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_1_2.DPRPOS .
+
+bldg:VAV_A_2_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_2_0.DPRPOS .
+
+bldg:VAV_A_2_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_2_1.DPRPOS .
+
+bldg:VAV_A_2_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_2_2.DPRPOS .
+
+bldg:VAV_A_3_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_3_0.DPRPOS .
+
+bldg:VAV_A_3_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_3_1.DPRPOS .
+
+bldg:VAV_A_3_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_3_2.DPRPOS .
+
+bldg:VAV_A_4_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_4_0.DPRPOS .
+
+bldg:VAV_A_4_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_4_1.DPRPOS .
+
+bldg:VAV_A_4_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_4_2.DPRPOS .
+
+bldg:VAV_A_5_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_5_0.DPRPOS .
+
+bldg:VAV_A_5_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_5_1.DPRPOS .
+
+bldg:VAV_A_5_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_5_2.DPRPOS .
+
+bldg:VAV_A_6_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_6_0.DPRPOS .
+
+bldg:VAV_A_6_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_6_1.DPRPOS .
+
+bldg:VAV_A_6_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_6_2.DPRPOS .
+
+bldg:VAV_A_7_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_7_0.DPRPOS .
+
+bldg:VAV_A_7_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_7_1.DPRPOS .
+
+bldg:VAV_A_7_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_7_2.DPRPOS .
+
+bldg:VAV_A_8_0.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_8_0.DPRPOS .
+
+bldg:VAV_A_8_1.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_8_1.DPRPOS .
+
+bldg:VAV_A_8_2.DPR a brick:Damper ;
+    brick:isControlledBy bldg:VAV_A_8_2.DPRPOS .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_0_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_0_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_0_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_0_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_0_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_0_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_1_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_1_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_1_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_1_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_1_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_1_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_2_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_2_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_2_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_2_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_2_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_2_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_3_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_3_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_3_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_3_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_3_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_3_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_4_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_4_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_4_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_4_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_4_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_4_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_5_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_5_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_5_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_5_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_5_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_5_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_6_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_6_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_6_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_6_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_6_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_6_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_7_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_7_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_7_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_7_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_7_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_7_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_8_0> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_8_0 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_8_1> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_8_1 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+<customer_1/building_1/#customer_1/building_1/#VAV_A_8_2> a brick:Variable_Air_Volume_Box ;
+    brick:feeds bldg:HVAC_Zone_A_8_2 ;
+    brick:isFedBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+brick:BuildingUUID rdfs:subClassOf brick:Tag .
+
+brick:CustomerUUID rdfs:subClassOf brick:Tag .
+
+brick:TimeseriesUUID rdfs:subClassOf brick:Tag .
+
+bldg:AHU_A.CALCULATED_SETPOINT a brick:Air_Temperature_Setpoint ;
+    brick:TimeseriesUUID "9437c8c2-57a2-4527-9c11-3c4af3fbc286" ;
+    brick:isMeasuredBy bldg:AHU_A.SUPPLY_TEMPERATURE .
+
+bldg:BLOCK_A a brick:Space .
+
+bldg:BUILDING a brick:Building ;
+    brick:BuildingUUID "0cdd624f-6a95-4c7e-b289-348621d39020" ;
+    brick:CustomerUUID "NSI" ;
+    brick:hasPart bldg:AHU_A,
+        bldg:FLOOR_0,
+        bldg:FLOOR_1,
+        bldg:FLOOR_2,
+        bldg:FLOOR_3,
+        bldg:FLOOR_4,
+        bldg:FLOOR_5,
+        bldg:FLOOR_6,
+        bldg:FLOOR_7,
+        bldg:FLOOR_8 .
+
+bldg:DISTRICT_HEATING a brick:Boiler ;
+    brick:feeds bldg:PRIMARY_HOT_WATER .
+
+bldg:FLOOR_0 a brick:Floor .
+
+bldg:FLOOR_1 a brick:Floor .
+
+bldg:FLOOR_2 a brick:Floor .
+
+bldg:FLOOR_3 a brick:Floor .
+
+bldg:FLOOR_4 a brick:Floor .
+
+bldg:FLOOR_5 a brick:Floor .
+
+bldg:FLOOR_6 a brick:Floor .
+
+bldg:FLOOR_7 a brick:Floor .
+
+bldg:FLOOR_8 a brick:Floor .
+
+bldg:HVAC_Zone_A_0_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_0_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_0_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_1_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_1_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_1_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_2_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_2_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_2_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_3_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_3_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_3_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_4_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_4_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_4_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_5_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_5_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_5_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_6_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_6_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_6_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_7_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_7_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_7_2 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_8_0 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_8_1 a brick:HVAC_Zone .
+
+bldg:HVAC_Zone_A_8_2 a brick:HVAC_Zone .
+
+bldg:VAV_A_0_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_0_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_0_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_1_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_1_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_1_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_2_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_2_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_2_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_3_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_3_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_3_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_4_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_4_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_4_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_5_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_5_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_5_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_6_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_6_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_6_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_7_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_7_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_7_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_8_0.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_8_1.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:VAV_A_8_2.DPRPOS a brick:Damper_Position_Setpoint .
+
+bldg:AHU_A a brick:Air_Handler_Unit ;
+    brick:feeds bldg:BLOCK_A ;
+    brick:hasPoint bldg:AHU_A.CALCULATED_SETPOINT ;
+    brick:isFedBy bldg:PRIMARY_HOT_WATER ;
+    brick:isPartOf bldg:BUILDING .
+
+bldg:PRIMARY_HOT_WATER a brick:Water_Distribution ;
+    brick:feeds bldg:AHU_A ;
+    brick:isFedBy bldg:DISTRICT_HEATING .
+
+bldg:AHU_A.SUPPLY_TEMPERATURE a brick:Supply_Air_Temperature_Sensor ;
+    brick:feeds bldg:VAV_A_0_0,
+        bldg:VAV_A_0_1,
+        bldg:VAV_A_0_2,
+        bldg:VAV_A_1_0,
+        bldg:VAV_A_1_1,
+        bldg:VAV_A_1_2,
+        bldg:VAV_A_2_0,
+        bldg:VAV_A_2_1,
+        bldg:VAV_A_2_2,
+        bldg:VAV_A_3_0,
+        bldg:VAV_A_3_1,
+        bldg:VAV_A_3_2,
+        bldg:VAV_A_4_0,
+        bldg:VAV_A_4_1,
+        bldg:VAV_A_4_2,
+        bldg:VAV_A_5_0,
+        bldg:VAV_A_5_1,
+        bldg:VAV_A_5_2,
+        bldg:VAV_A_6_0,
+        bldg:VAV_A_6_1,
+        bldg:VAV_A_6_2,
+        bldg:VAV_A_7_0,
+        bldg:VAV_A_7_1,
+        bldg:VAV_A_7_2,
+        bldg:VAV_A_8_0,
+        bldg:VAV_A_8_1,
+        bldg:VAV_A_8_2 .
+
