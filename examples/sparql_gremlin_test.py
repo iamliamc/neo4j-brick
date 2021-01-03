@@ -11,7 +11,7 @@ DEFAULT_LOCAL_CONNECTION_STRING = "ws://localhost:8182/gremlin"
 g = rdf2g.setup_graph(DEFAULT_LOCAL_CONNECTION_STRING)
 
 
-OUTPUT_FILE_LAM_PROPERTIES = pathlib.Path("custom_brick_v103_sample_graph.ttl").resolve()
+OUTPUT_FILE_LAM_PROPERTIES = pathlib.Path("custom_brick_v11_sample_graph.ttl").resolve()
 
 rdf_graph = rdflib.Graph()
 rdf_graph.parse(str(OUTPUT_FILE_LAM_PROPERTIES), format="ttl")
