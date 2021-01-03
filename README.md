@@ -25,3 +25,8 @@ How to run tests:
 ```
     pytest -c pytest.ini tests
 ```
+
+
+TODO add an example exporting RDF: 
+
+https://neo4j.com/docs/labs/nsmntx/current/export/
