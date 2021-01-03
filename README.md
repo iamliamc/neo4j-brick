@@ -10,7 +10,7 @@ Run it in detached mode
 ```
 
 This interesting query returns the ENTIRE sub-graph connected to Resource:Building
-See the (APOC library)[https://neo4j.com/labs/apoc/4.1/]
+See the [APOC library](https://neo4j.com/labs/apoc/4.1/)
 ```
     MATCH (n:Resource:Building)
     CALL apoc.path.subgraphNodes(n, {minLevel:1}) YIELD node
