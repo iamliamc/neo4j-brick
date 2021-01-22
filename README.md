@@ -2,12 +2,12 @@ See the most trivial example  in [sdk/simple_example.py](https://github.com/iaml
 
 How to launch the Neo4J instance on docker locally:
 ```
-    docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data --env='NEO4JLABS_PLUGINS=["apoc", "n10s"]' --env=NEO4J_AUTH=none neo4j:latest
+    docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data --env='NEO4JLABS_PLUGINS=["apoc", "n10s"]' --env=NEO4J_AUTH=none neo4j:4.1.0
 ```
 
 Run it in detached mode
 ```
-    docker run -d --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data --env='NEO4JLABS_PLUGINS=["apoc", "n10s"]' --env=NEO4J_AUTH=none neo4j:latest
+    docker run -d --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data --env='NEO4JLABS_PLUGINS=["apoc", "n10s"]' --env=NEO4J_AUTH=none neo4j:4.1.0
 
 ```
 
@@ -27,6 +27,7 @@ How to run tests:
 ```
 
 
-TODO add an example exporting RDF: 
-
-https://neo4j.com/docs/labs/nsmntx/current/export/
+TODO 
+1) Find a way to keep up with neo4j images so long as they contain n10s, apoc plugins
+2) Add an example exporting RDF https://neo4j.com/docs/labs/nsmntx/current/export/
+3) Create SDK to manage graph 
