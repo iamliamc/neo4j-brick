@@ -1,0 +1,1166 @@
+@prefix brick: <https://brickschema.org/schema/1.1/Brick#> .
+@prefix flight_forum_120: <https://topology.sbp.spectral.energy/merin/flightforumeindhoven120#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+brick:BuildingUUID rdfs:subClassOf brick:Tag .
+
+brick:CustomerUUID rdfs:subClassOf brick:Tag .
+
+brick:Equipment_Group rdfs:subClassOf brick:Equipment .
+
+brick:Outside_Air_Temperature_Mid_Reset_Point rdfs:subClassOf brick:Reset_Setpoint .
+
+brick:SensorPrefix rdfs:subClassOf brick:Tag .
+
+brick:Supply_Air_Temperature_Mid_Reset_Point rdfs:subClassOf brick:Reset_Setpoint .
+
+brick:Supply_Water_Temperature_Mid_Reset_Point rdfs:subClassOf brick:Reset_Setpoint .
+
+brick:TimeseriesUUID rdfs:subClassOf brick:Tag .
+
+flight_forum_120:Air_Handling_Unit.1.Cold_Water_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "21610e37-2060-4f84-97cc-b7198e8ad9e5" ;
+    brick:isControlledBy flight_forum_120:Air_Handling_Unit.1.Heating_Curve ;
+    brick:isFedBy flight_forum_120:Chiller.1,
+        flight_forum_120:Chiller.2,
+        flight_forum_120:Chiller.3,
+        flight_forum_120:Chiller.4 .
+
+flight_forum_120:Air_Handling_Unit.1.Hot_Water_Valve a brick:Heating_Valve ;
+    brick:TimeseriesUUID "ea87274b-8081-46f7-8171-45255c212673" ;
+    brick:isControlledBy flight_forum_120:Air_Handling_Unit.1.Heating_Curve ;
+    brick:isFedBy flight_forum_120:Primary_Hot_Water.Water_Distribution .
+
+flight_forum_120:Air_Handling_Unit.1.Return_Air_Temperature_Sensor a brick:Return_Air_Temperature_Sensor ;
+    brick:TimeseriesUUID "d9e71488-055d-444e-a4e4-1cc6c7be892d" .
+
+flight_forum_120:Air_Handling_Unit.3.Cold_Water_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "02296ebd-2070-4105-a927-bb4cd233ff56" ;
+    brick:isControlledBy flight_forum_120:Air_Handling_Unit.3.Heating_Curve ;
+    brick:isFedBy flight_forum_120:Chiller.1,
+        flight_forum_120:Chiller.2,
+        flight_forum_120:Chiller.3,
+        flight_forum_120:Chiller.4 .
+
+flight_forum_120:Air_Handling_Unit.3.Hot_Water_Valve a brick:Heating_Valve ;
+    brick:TimeseriesUUID "c741074a-0321-4ba7-9eaa-ba57c2ebda06" ;
+    brick:isControlledBy flight_forum_120:Air_Handling_Unit.3.Heating_Curve ;
+    brick:isFedBy flight_forum_120:Primary_Hot_Water.Water_Distribution .
+
+flight_forum_120:Air_Handling_Unit.3.Return_Air_Temperature_Sensor a brick:Return_Air_Temperature_Sensor ;
+    brick:TimeseriesUUID "2dd4e25e-fc8d-469d-9e81-4a8279f63772" .
+
+flight_forum_120:Air_Handling_Unit.4.Cold_Water_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "c2095a48-0307-49f0-a114-6c4d8725d345" ;
+    brick:isControlledBy flight_forum_120:Air_Handling_Unit.4.Heating_Curve ;
+    brick:isFedBy flight_forum_120:Chiller.1,
+        flight_forum_120:Chiller.2,
+        flight_forum_120:Chiller.3,
+        flight_forum_120:Chiller.4 .
+
+flight_forum_120:Air_Handling_Unit.4.Hot_Water_Valve a brick:Heating_Valve ;
+    brick:TimeseriesUUID "6b3bb1b1-c81c-443c-9546-60a654c687df" ;
+    brick:isControlledBy flight_forum_120:Air_Handling_Unit.4.Heating_Curve ;
+    brick:isFedBy flight_forum_120:Primary_Hot_Water.Water_Distribution .
+
+flight_forum_120:Air_Handling_Unit.4.Return_Air_Temperature_Sensor a brick:Return_Air_Temperature_Sensor ;
+    brick:TimeseriesUUID "5f487814-7b66-4944-94b7-80859533aef2" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Hot_Water_Valve a brick:Water_Valve ;
+    brick:feeds flight_forum_120:Primary_Hot_Water.Water_Distribution.Pump .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Max a brick:Max_Limit ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Min a brick:Min_Limit ;
+    brick:TimeseriesUUID "3df81fb8-777d-44ec-91da-cb0c8715533a" .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Supply_Temperature a brick:Supply_Air_Temperature_Sensor ;
+    brick:TimeseriesUUID "N/A" ;
+    brick:isRegulatedBy flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Calculated_Setpoint .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve.X1 a brick:Outside_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "831f7a18-b063-4c24-8f8b-1df82a01b1ad" .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve.X2 a brick:Outside_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "c549dd01-6171-4206-9674-80f3a65ccb6c" .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Y1 a brick:Supply_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "a32ca39d-d738-4af2-a8eb-cb6e11e1168f" .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Y2 a brick:Supply_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "7d571a20-b20d-463d-a4fd-f8008aaf67be" .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Max a brick:Max_Limit ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Min a brick:Min_Limit ;
+    brick:TimeseriesUUID "23a636c7-d153-4517-adf5-3c0657463251" .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Supply_Temperature a brick:Supply_Air_Temperature_Sensor ;
+    brick:TimeseriesUUID "N/A" ;
+    brick:isRegulatedBy flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Calculated_Setpoint .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve.X1 a brick:Outside_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "98684106-ed1d-497c-a6fb-0a0fea9bce9d" .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve.X2 a brick:Outside_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "1c34896d-496a-462f-96bf-f6d0c06c7484" .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Y1 a brick:Supply_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "a93d2d89-07fd-43a6-95ec-6d6fa8a84a36" .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Y2 a brick:Supply_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "fca7117c-4369-4588-85cf-365554b406be" .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Max a brick:Max_Limit ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Min a brick:Min_Limit ;
+    brick:TimeseriesUUID "220988de-e1ab-433a-9836-3fb5a6c8af85" .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Supply_Temperature a brick:Supply_Air_Temperature_Sensor ;
+    brick:TimeseriesUUID "N/A" ;
+    brick:isRegulatedBy flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Calculated_Setpoint .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve.X1 a brick:Outside_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "5cfaa173-3499-4e33-8e95-85d67b9bef84" .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve.X2 a brick:Outside_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "d9583ae2-c145-45f2-9949-f1be213e1f00" .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Y1 a brick:Supply_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "a3da27ff-cb2e-4362-baf8-3d372f478816" .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Y2 a brick:Supply_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "7076dc6f-6eed-4612-942b-ed57623b637c" .
+
+flight_forum_120:Block_A a brick:HVAC_Zone ;
+    brick:hasLocation flight_forum_120:Floor_0_Block_A,
+        flight_forum_120:Floor_1_Block_A,
+        flight_forum_120:Floor_2_Block_A,
+        flight_forum_120:Floor_3_Block_A,
+        flight_forum_120:Floor_4_Block_A,
+        flight_forum_120:Floor_5_Block_A .
+
+flight_forum_120:Block_B a brick:HVAC_Zone ;
+    brick:hasLocation flight_forum_120:Floor_0_Block_B,
+        flight_forum_120:Floor_1_Block_B,
+        flight_forum_120:Floor_2_Block_B,
+        flight_forum_120:Floor_3_Block_B,
+        flight_forum_120:Floor_4_Block_B,
+        flight_forum_120:Floor_5_Block_B .
+
+flight_forum_120:Block_C a brick:HVAC_Zone ;
+    brick:hasLocation flight_forum_120:Floor_0_Block_C,
+        flight_forum_120:Floor_1_Block_C,
+        flight_forum_120:Floor_2_Block_C,
+        flight_forum_120:Floor_3_Block_C,
+        flight_forum_120:Floor_4_Block_C,
+        flight_forum_120:Floor_5_Block_C .
+
+flight_forum_120:Block_D a brick:HVAC_Zone ;
+    brick:hasLocation flight_forum_120:Floor_0_Block_D,
+        flight_forum_120:Floor_1_Block_D,
+        flight_forum_120:Floor_2_Block_D,
+        flight_forum_120:Floor_3_Block_D,
+        flight_forum_120:Floor_4_Block_D,
+        flight_forum_120:Floor_5_Block_D .
+
+flight_forum_120:Boiler.1 a brick:Boiler ;
+    brick:feeds flight_forum_120:Primary_Hot_Water.Water_Distribution ;
+    brick:hasPart flight_forum_120:Boiler.1.Hot_Water_Pump,
+        flight_forum_120:Primary_Hot_Water.1.Return_Temperature_Sensor,
+        flight_forum_120:Primary_Hot_Water.1.Supply_Temperature_Sensor ;
+    brick:hasPoint flight_forum_120:Boiler.1.Input_Voltage .
+
+flight_forum_120:Boiler.1.Hot_Water_Pump a brick:Hot_Water_Pump ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Boiler.1.Input_Voltage a brick:Voltage_Sensor ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Boiler.2 a brick:Boiler ;
+    brick:feeds flight_forum_120:Primary_Hot_Water.Water_Distribution ;
+    brick:hasPart flight_forum_120:Boiler.2.Hot_Water_Pump,
+        flight_forum_120:Primary_Hot_Water.1.Return_Temperature_Sensor,
+        flight_forum_120:Primary_Hot_Water.1.Supply_Temperature_Sensor ;
+    brick:hasPoint flight_forum_120:Boiler.2.Input_Voltage .
+
+flight_forum_120:Boiler.2.Hot_Water_Pump a brick:Hot_Water_Pump ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Boiler.2.Input_Voltage a brick:Voltage_Sensor ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.1.Cold_Water_Pump a brick:Hot_Water_Pump ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.1.Status a brick:Status ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.2.Cold_Water_Pump a brick:Hot_Water_Pump ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.2.Status a brick:Status ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.3.Cold_Water_Pump a brick:Hot_Water_Pump ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.3.Status a brick:Status ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.4.Cold_Water_Pump a brick:Hot_Water_Pump ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.4.Status a brick:Status ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Floor_0 a brick:Floor ;
+    brick:hasLocation flight_forum_120:Floor_0_Block_A,
+        flight_forum_120:Floor_0_Block_B,
+        flight_forum_120:Floor_0_Block_C,
+        flight_forum_120:Floor_0_Block_D .
+
+flight_forum_120:Floor_0_Block_A_Spectral_Sensor_19 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp19" .
+
+flight_forum_120:Floor_0_Block_B_Spectral_Sensor_22 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp22" .
+
+flight_forum_120:Floor_0_Block_C_Spectral_Sensor_12 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp12" .
+
+flight_forum_120:Floor_0_Block_D_Spectral_Sensor_1 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp1" .
+
+flight_forum_120:Floor_1 a brick:Floor ;
+    brick:hasLocation flight_forum_120:Floor_1_Block_A,
+        flight_forum_120:Floor_1_Block_B,
+        flight_forum_120:Floor_1_Block_C,
+        flight_forum_120:Floor_1_Block_D .
+
+flight_forum_120:Floor_1_Block_A_Spectral_Sensor_16 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp16" .
+
+flight_forum_120:Floor_1_Block_B_Spectral_Sensor_23 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp23" .
+
+flight_forum_120:Floor_1_Block_C_Spectral_Sensor_18 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp18" .
+
+flight_forum_120:Floor_1_Block_D_Spectral_Sensor_17 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp17" .
+
+flight_forum_120:Floor_2 a brick:Floor ;
+    brick:hasLocation flight_forum_120:Floor_2_Block_A,
+        flight_forum_120:Floor_2_Block_B,
+        flight_forum_120:Floor_2_Block_C,
+        flight_forum_120:Floor_2_Block_D .
+
+flight_forum_120:Floor_2_Block_A_Spectral_Sensor_7 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp7" .
+
+flight_forum_120:Floor_2_Block_B_Spectral_Sensor_6 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp6" .
+
+flight_forum_120:Floor_2_Block_C_Spectral_Sensor_9 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp9" .
+
+flight_forum_120:Floor_2_Block_D_Spectral_Sensor_8 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp8" .
+
+flight_forum_120:Floor_3 a brick:Floor ;
+    brick:hasLocation flight_forum_120:Floor_3_Block_A,
+        flight_forum_120:Floor_3_Block_B,
+        flight_forum_120:Floor_3_Block_C,
+        flight_forum_120:Floor_3_Block_D .
+
+flight_forum_120:Floor_3_Block_A_Spectral_Sensor_21 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp21" .
+
+flight_forum_120:Floor_3_Block_B_Spectral_Sensor_20 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp20" .
+
+flight_forum_120:Floor_3_Block_C_Spectral_Sensor_28 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp28" .
+
+flight_forum_120:Floor_3_Block_D_Spectral_Sensor_15 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp15" .
+
+flight_forum_120:Floor_4 a brick:Floor ;
+    brick:hasLocation flight_forum_120:Floor_4_Block_A,
+        flight_forum_120:Floor_4_Block_B,
+        flight_forum_120:Floor_4_Block_C,
+        flight_forum_120:Floor_4_Block_D .
+
+flight_forum_120:Floor_4_Block_A_Spectral_Sensor_14 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp14" .
+
+flight_forum_120:Floor_4_Block_A_Spectral_Sensor_26 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp26" .
+
+flight_forum_120:Floor_4_Block_B_Spectral_Sensor_13 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp13" .
+
+flight_forum_120:Floor_4_Block_B_Spectral_Sensor_24 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp24" .
+
+flight_forum_120:Floor_4_Block_C_Spectral_Sensor_10 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp10" .
+
+flight_forum_120:Floor_4_Block_D_Spectral_Sensor_11 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp11" .
+
+flight_forum_120:Floor_5 a brick:Floor ;
+    brick:hasLocation flight_forum_120:Floor_5_Block_A,
+        flight_forum_120:Floor_5_Block_B,
+        flight_forum_120:Floor_5_Block_C,
+        flight_forum_120:Floor_5_Block_D .
+
+flight_forum_120:Floor_5_Block_A_Spectral_Sensor_2 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp2" .
+
+flight_forum_120:Floor_5_Block_B_Spectral_Sensor_5 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp5" .
+
+flight_forum_120:Floor_5_Block_C_Spectral_Sensor_3 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp3" .
+
+flight_forum_120:Floor_5_Block_D_Spectral_Sensor_25 a brick:SpectralSensor ;
+    brick:SensorPrefix "FFtemp25" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve a brick:HeatingCurve ;
+    brick:hasPoint flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Calculated_Setpoint,
+        flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Max,
+        flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Min,
+        flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Supply_Temperature,
+        flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.X1,
+        flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.X2,
+        flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Y1,
+        flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Y2 ;
+    brick:isAssociatedWith flight_forum_120:Primary_Hot_Water.Water_Distribution ;
+    brick:isPartOf flight_forum_120:Primary_Hot_Water.Water_Distribution .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Max a brick:Max_Limit ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Min a brick:Min_Limit ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Supply_Temperature a brick:Supply_Water_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" ;
+    brick:isRegulatedBy flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Calculated_Setpoint .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.X1 a brick:Outside_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.X2 a brick:Outside_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Y1 a brick:Supply_Water_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Y2 a brick:Supply_Water_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "b2b4224e-0b8f-43c8-8507-4c3010e8d859" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Pump a brick:Hot_Water_Pump .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve a brick:HeatingCurve ;
+    brick:hasPoint flight_forum_120:Secondary_Cold_Water.Heating_Curve.Calculated_Setpoint,
+        flight_forum_120:Secondary_Cold_Water.Heating_Curve.Max,
+        flight_forum_120:Secondary_Cold_Water.Heating_Curve.Min,
+        flight_forum_120:Secondary_Cold_Water.Heating_Curve.Supply_Temperature,
+        flight_forum_120:Secondary_Cold_Water.Heating_Curve.X1,
+        flight_forum_120:Secondary_Cold_Water.Heating_Curve.X2,
+        flight_forum_120:Secondary_Cold_Water.Heating_Curve.Y1,
+        flight_forum_120:Secondary_Cold_Water.Heating_Curve.Y2 ;
+    brick:isAssociatedWith flight_forum_120:Secondary_Cold_Water ;
+    brick:isPartOf flight_forum_120:Secondary_Cold_Water .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve.Max a brick:Max_Limit ;
+    brick:TimeseriesUUID "be4b6718-048e-47b2-85a6-c4a4875ee8d2" .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve.Min a brick:Min_Limit ;
+    brick:TimeseriesUUID "1d3e0bf6-5dec-46aa-ab50-b20730a2f34d" .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve.Supply_Temperature a brick:Supply_Water_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" ;
+    brick:isRegulatedBy flight_forum_120:Secondary_Cold_Water.Heating_Curve.Calculated_Setpoint .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve.X1 a brick:Outside_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "d6a31cc9-b9f7-45b7-96ab-462ad42f0a86" .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve.X2 a brick:Outside_Air_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "b8806c52-a986-4b41-830f-d825bcf11843" .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve.Y1 a brick:Supply_Water_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "08495b66-c447-49e0-83d7-fd929142d2de" .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve.Y2 a brick:Supply_Water_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "5d7dfc39-0f4d-4de5-855d-3e6d86a2f5ec" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve a brick:HeatingCurve ;
+    brick:hasPoint flight_forum_120:Secondary_Hot_Water.Heating_Curve.Calculated_Setpoint,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.Max,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.Min,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.Supply_Temperature,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.X1,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.X2,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.X3,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.Y1,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.Y2,
+        flight_forum_120:Secondary_Hot_Water.Heating_Curve.Y3 ;
+    brick:isAssociatedWith flight_forum_120:Secondary_Hot_Water ;
+    brick:isPartOf flight_forum_120:Secondary_Hot_Water .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.Max a brick:Max_Limit ;
+    brick:TimeseriesUUID "be4b6718-048e-47b2-85a6-c4a4875ee8d2" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.Min a brick:Min_Limit ;
+    brick:TimeseriesUUID "1d3e0bf6-5dec-46aa-ab50-b20730a2f34d" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.Supply_Temperature a brick:Supply_Water_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" ;
+    brick:isRegulatedBy flight_forum_120:Secondary_Hot_Water.Heating_Curve.Calculated_Setpoint .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.X1 a brick:Outside_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "d6a31cc9-b9f7-45b7-96ab-462ad42f0a86" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.X2 a brick:Outside_Air_Temperature_Mid_Reset_Setpoint ;
+    brick:TimeseriesUUID "b8806c52-a986-4b41-830f-d825bcf11843" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.X3 a brick:Outside_Air_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "cd7b49d7-3b7a-40ad-8362-a2466b43ba3d" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.Y1 a brick:Supply_Water_Temperature_Low_Reset_Setpoint ;
+    brick:TimeseriesUUID "08495b66-c447-49e0-83d7-fd929142d2de" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.Y2 a brick:Supply_Water_Temperature_Mid_Reset_Setpoint ;
+    brick:TimeseriesUUID "5d7dfc39-0f4d-4de5-855d-3e6d86a2f5ec" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.Y3 a brick:Supply_Water_Temperature_High_Reset_Setpoint ;
+    brick:TimeseriesUUID "e0ca8505-8f47-44d8-af99-e802a6d4dac9" .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Calculated_Setpoint a brick:Air_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Calculated_Setpoint a brick:Air_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Calculated_Setpoint a brick:Air_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Floor_0_Block_A.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_0_Block_A ;
+    brick:hasPart flight_forum_120:Floor_0_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_A.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_0_Block_B.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_0_Block_B ;
+    brick:hasPart flight_forum_120:Floor_0_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_B.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_0_Block_C.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_0_Block_C ;
+    brick:hasPart flight_forum_120:Floor_0_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_C.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_0_Block_D.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_0_Block_D ;
+    brick:hasPart flight_forum_120:Floor_0_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_D.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_1_Block_A.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_1_Block_A ;
+    brick:hasPart flight_forum_120:Floor_1_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_A.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_1_Block_B.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_1_Block_B ;
+    brick:hasPart flight_forum_120:Floor_1_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_B.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_1_Block_C.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_1_Block_C ;
+    brick:hasPart flight_forum_120:Floor_1_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_C.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_1_Block_D.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_1_Block_D ;
+    brick:hasPart flight_forum_120:Floor_1_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_D.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_2_Block_A.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_2_Block_A ;
+    brick:hasPart flight_forum_120:Floor_2_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_A.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_2_Block_B.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_2_Block_B ;
+    brick:hasPart flight_forum_120:Floor_2_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_B.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_2_Block_C.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_2_Block_C ;
+    brick:hasPart flight_forum_120:Floor_2_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_C.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_2_Block_D.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_2_Block_D ;
+    brick:hasPart flight_forum_120:Floor_2_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_D.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_3_Block_A.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_3_Block_A ;
+    brick:hasPart flight_forum_120:Floor_3_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_A.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_3_Block_B.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_3_Block_B ;
+    brick:hasPart flight_forum_120:Floor_3_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_B.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_3_Block_C.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_3_Block_C ;
+    brick:hasPart flight_forum_120:Floor_3_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_C.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_3_Block_D.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_3_Block_D ;
+    brick:hasPart flight_forum_120:Floor_3_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_D.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_4_Block_A.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_4_Block_A ;
+    brick:hasPart flight_forum_120:Floor_4_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_A.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_4_Block_B.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_4_Block_B ;
+    brick:hasPart flight_forum_120:Floor_4_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_B.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_4_Block_C.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_4_Block_C ;
+    brick:hasPart flight_forum_120:Floor_4_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_C.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_4_Block_D.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_4_Block_D ;
+    brick:hasPart flight_forum_120:Floor_4_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_D.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_5_Block_A.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_5_Block_A ;
+    brick:hasPart flight_forum_120:Floor_5_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_A.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_5_Block_B.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_5_Block_B ;
+    brick:hasPart flight_forum_120:Floor_5_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_B.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_5_Block_C.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_5_Block_C ;
+    brick:hasPart flight_forum_120:Floor_5_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_C.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Floor_5_Block_D.Fan_Coil_Unit a brick:FCU ;
+    brick:feeds flight_forum_120:Floor_5_Block_D ;
+    brick:hasPart flight_forum_120:Floor_5_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_D.Heating_Water_Distribution.Heating_Valve .
+
+flight_forum_120:Primary_Hot_Water.1.Return_Temperature_Sensor a brick:Hot_Water_Return_Temperature_Sensor ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Primary_Hot_Water.1.Supply_Temperature_Sensor a brick:Hot_Water_Supply_Temperature_Sensor ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve.Calculated_Setpoint a brick:Water_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Secondary_Cold_Water.Heating_Curve.Calculated_Setpoint a brick:Water_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Secondary_Hot_Water.Heating_Curve.Calculated_Setpoint a brick:Water_Temperature_Setpoint ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Air_Handling_Unit.1 brick:feedsAir flight_forum_120:Floor_0_Block_A,
+        flight_forum_120:Floor_0_Block_B,
+        flight_forum_120:Floor_0_Block_C,
+        flight_forum_120:Floor_0_Block_D,
+        flight_forum_120:Floor_1_Block_A,
+        flight_forum_120:Floor_1_Block_B,
+        flight_forum_120:Floor_1_Block_C,
+        flight_forum_120:Floor_1_Block_D,
+        flight_forum_120:Floor_2_Block_A,
+        flight_forum_120:Floor_2_Block_B,
+        flight_forum_120:Floor_2_Block_C,
+        flight_forum_120:Floor_2_Block_D,
+        flight_forum_120:Floor_3_Block_A,
+        flight_forum_120:Floor_3_Block_B,
+        flight_forum_120:Floor_3_Block_C,
+        flight_forum_120:Floor_3_Block_D,
+        flight_forum_120:Floor_4_Block_A,
+        flight_forum_120:Floor_4_Block_B,
+        flight_forum_120:Floor_4_Block_C,
+        flight_forum_120:Floor_4_Block_D,
+        flight_forum_120:Floor_5_Block_A,
+        flight_forum_120:Floor_5_Block_B,
+        flight_forum_120:Floor_5_Block_C,
+        flight_forum_120:Floor_5_Block_D ;
+    brick:isPartOf flight_forum_120:Building ;
+    brick:isRegulatedBy flight_forum_120:Air_Handling_Unit.1.Heating_Curve .
+
+flight_forum_120:Air_Handling_Unit.1.Heating_Curve a brick:HeatingCurve ;
+    brick:hasPoint flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Calculated_Setpoint,
+        flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Max,
+        flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Min,
+        flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Supply_Temperature,
+        flight_forum_120:Air_Handling_Unit.1.Heating_Curve.X1,
+        flight_forum_120:Air_Handling_Unit.1.Heating_Curve.X2,
+        flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Y1,
+        flight_forum_120:Air_Handling_Unit.1.Heating_Curve.Y2 ;
+    brick:isAssociatedWith flight_forum_120:Air_Handling_Unit.1 ;
+    brick:isPartOf flight_forum_120:Air_Handling_Unit.1 .
+
+flight_forum_120:Air_Handling_Unit.3 brick:feedsAir flight_forum_120:Floor_0_Block_A,
+        flight_forum_120:Floor_0_Block_B,
+        flight_forum_120:Floor_0_Block_C,
+        flight_forum_120:Floor_0_Block_D,
+        flight_forum_120:Floor_1_Block_A,
+        flight_forum_120:Floor_1_Block_B,
+        flight_forum_120:Floor_1_Block_C,
+        flight_forum_120:Floor_1_Block_D,
+        flight_forum_120:Floor_2_Block_A,
+        flight_forum_120:Floor_2_Block_B,
+        flight_forum_120:Floor_2_Block_C,
+        flight_forum_120:Floor_2_Block_D,
+        flight_forum_120:Floor_3_Block_A,
+        flight_forum_120:Floor_3_Block_B,
+        flight_forum_120:Floor_3_Block_C,
+        flight_forum_120:Floor_3_Block_D,
+        flight_forum_120:Floor_4_Block_A,
+        flight_forum_120:Floor_4_Block_B,
+        flight_forum_120:Floor_4_Block_C,
+        flight_forum_120:Floor_4_Block_D,
+        flight_forum_120:Floor_5_Block_A,
+        flight_forum_120:Floor_5_Block_B,
+        flight_forum_120:Floor_5_Block_C,
+        flight_forum_120:Floor_5_Block_D ;
+    brick:isPartOf flight_forum_120:Building ;
+    brick:isRegulatedBy flight_forum_120:Air_Handling_Unit.3.Heating_Curve .
+
+flight_forum_120:Air_Handling_Unit.3.Heating_Curve a brick:HeatingCurve ;
+    brick:hasPoint flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Calculated_Setpoint,
+        flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Max,
+        flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Min,
+        flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Supply_Temperature,
+        flight_forum_120:Air_Handling_Unit.3.Heating_Curve.X1,
+        flight_forum_120:Air_Handling_Unit.3.Heating_Curve.X2,
+        flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Y1,
+        flight_forum_120:Air_Handling_Unit.3.Heating_Curve.Y2 ;
+    brick:isAssociatedWith flight_forum_120:Air_Handling_Unit.3 ;
+    brick:isPartOf flight_forum_120:Air_Handling_Unit.3 .
+
+flight_forum_120:Air_Handling_Unit.4 brick:feedsAir flight_forum_120:Floor_0_Block_A,
+        flight_forum_120:Floor_0_Block_B,
+        flight_forum_120:Floor_0_Block_C,
+        flight_forum_120:Floor_0_Block_D,
+        flight_forum_120:Floor_1_Block_A,
+        flight_forum_120:Floor_1_Block_B,
+        flight_forum_120:Floor_1_Block_C,
+        flight_forum_120:Floor_1_Block_D,
+        flight_forum_120:Floor_2_Block_A,
+        flight_forum_120:Floor_2_Block_B,
+        flight_forum_120:Floor_2_Block_C,
+        flight_forum_120:Floor_2_Block_D,
+        flight_forum_120:Floor_3_Block_A,
+        flight_forum_120:Floor_3_Block_B,
+        flight_forum_120:Floor_3_Block_C,
+        flight_forum_120:Floor_3_Block_D,
+        flight_forum_120:Floor_4_Block_A,
+        flight_forum_120:Floor_4_Block_B,
+        flight_forum_120:Floor_4_Block_C,
+        flight_forum_120:Floor_4_Block_D,
+        flight_forum_120:Floor_5_Block_A,
+        flight_forum_120:Floor_5_Block_B,
+        flight_forum_120:Floor_5_Block_C,
+        flight_forum_120:Floor_5_Block_D ;
+    brick:isPartOf flight_forum_120:Building ;
+    brick:isRegulatedBy flight_forum_120:Air_Handling_Unit.4.Heating_Curve .
+
+flight_forum_120:Air_Handling_Unit.4.Heating_Curve a brick:HeatingCurve ;
+    brick:hasPoint flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Calculated_Setpoint,
+        flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Max,
+        flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Min,
+        flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Supply_Temperature,
+        flight_forum_120:Air_Handling_Unit.4.Heating_Curve.X1,
+        flight_forum_120:Air_Handling_Unit.4.Heating_Curve.X2,
+        flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Y1,
+        flight_forum_120:Air_Handling_Unit.4.Heating_Curve.Y2 ;
+    brick:isAssociatedWith flight_forum_120:Air_Handling_Unit.4 ;
+    brick:isPartOf flight_forum_120:Air_Handling_Unit.4 .
+
+flight_forum_120:Building a brick:Building ;
+    brick:BuildingUUID "7f61ad07-cd43-47b5-a886-8b8ee30aaed0" ;
+    brick:CustomerUUID "MERIN" ;
+    brick:hasLocation flight_forum_120:Block_A,
+        flight_forum_120:Block_B,
+        flight_forum_120:Block_C,
+        flight_forum_120:Block_D,
+        flight_forum_120:Floor_0,
+        flight_forum_120:Floor_0_Block_A,
+        flight_forum_120:Floor_0_Block_B,
+        flight_forum_120:Floor_0_Block_C,
+        flight_forum_120:Floor_0_Block_D,
+        flight_forum_120:Floor_1,
+        flight_forum_120:Floor_1_Block_A,
+        flight_forum_120:Floor_1_Block_B,
+        flight_forum_120:Floor_1_Block_C,
+        flight_forum_120:Floor_1_Block_D,
+        flight_forum_120:Floor_2,
+        flight_forum_120:Floor_2_Block_A,
+        flight_forum_120:Floor_2_Block_B,
+        flight_forum_120:Floor_2_Block_C,
+        flight_forum_120:Floor_2_Block_D,
+        flight_forum_120:Floor_3,
+        flight_forum_120:Floor_3_Block_A,
+        flight_forum_120:Floor_3_Block_B,
+        flight_forum_120:Floor_3_Block_C,
+        flight_forum_120:Floor_3_Block_D,
+        flight_forum_120:Floor_4,
+        flight_forum_120:Floor_4_Block_A,
+        flight_forum_120:Floor_4_Block_B,
+        flight_forum_120:Floor_4_Block_C,
+        flight_forum_120:Floor_4_Block_D,
+        flight_forum_120:Floor_5,
+        flight_forum_120:Floor_5_Block_A,
+        flight_forum_120:Floor_5_Block_B,
+        flight_forum_120:Floor_5_Block_C,
+        flight_forum_120:Floor_5_Block_D ;
+    brick:hasPart flight_forum_120:Air_Handling_Unit.1,
+        flight_forum_120:Air_Handling_Unit.3,
+        flight_forum_120:Air_Handling_Unit.4,
+        flight_forum_120:Boiler.1,
+        flight_forum_120:Boiler.2,
+        flight_forum_120:Chiller.1,
+        flight_forum_120:Chiller.2,
+        flight_forum_120:Chiller.3,
+        flight_forum_120:Chiller.4,
+        flight_forum_120:Primary_Hot_Water.Water_Distribution,
+        flight_forum_120:Secondary_Cold_Water,
+        flight_forum_120:Secondary_Hot_Water .
+
+flight_forum_120:Floor_0_Block_A.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "c6bc6398-0d71-4560-9a53-a7b38799439f" ;
+    brick:feeds flight_forum_120:Floor_0_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_0_Block_A.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "ef7e03ad-98fc-495f-8559-65fb30d3f093" ;
+    brick:feeds flight_forum_120:Floor_0_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_0_Block_B.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "e49aeccb-7005-4c4b-9c34-9d94c641db7f" ;
+    brick:feeds flight_forum_120:Floor_0_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_0_Block_B.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "b739f4c3-376a-4625-8949-894a9b3140b6" ;
+    brick:feeds flight_forum_120:Floor_0_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_0_Block_C.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "c6f943ae-c808-4171-8afd-aaea46605d7d" ;
+    brick:feeds flight_forum_120:Floor_0_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_0_Block_C.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "5beb418a-6642-44e4-a422-76701781149c" ;
+    brick:feeds flight_forum_120:Floor_0_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_0_Block_D.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "e902cd72-b753-4651-b4f3-548c1fb0fef7" ;
+    brick:feeds flight_forum_120:Floor_0_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_0_Block_D.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "904e34b0-6e58-4ba5-be0a-645de36dfc87" ;
+    brick:feeds flight_forum_120:Floor_0_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_1_Block_A.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "b3a3dae3-2282-4d03-bc06-bd1fd6d4f363" ;
+    brick:feeds flight_forum_120:Floor_1_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_1_Block_A.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "cab37e05-a33f-4251-bb50-2df0af272e7b" ;
+    brick:feeds flight_forum_120:Floor_1_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_1_Block_B.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "c1919cb6-022e-4347-876f-654896646dc5" ;
+    brick:feeds flight_forum_120:Floor_1_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_1_Block_B.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "71e5a887-0580-4e3d-acfb-703af8eb5409" ;
+    brick:feeds flight_forum_120:Floor_1_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_1_Block_C.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "fe4efcee-38fc-4eb5-a283-5b9f06caab84" ;
+    brick:feeds flight_forum_120:Floor_1_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_1_Block_C.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "eb46e4a3-131b-4c84-85ef-14738fec85c0" ;
+    brick:feeds flight_forum_120:Floor_1_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_1_Block_D.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "20f038a7-13e7-425c-9771-d217d6313705" ;
+    brick:feeds flight_forum_120:Floor_1_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_1_Block_D.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "b1da3fa6-abb1-40c5-8aae-e6c947b7fb90" ;
+    brick:feeds flight_forum_120:Floor_1_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_2_Block_A.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "1ba36843-c5cd-4a6e-bae3-cead9f78fb24" ;
+    brick:feeds flight_forum_120:Floor_2_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_2_Block_A.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "63a902fb-38f9-427d-9674-bfc7c8bcc088" ;
+    brick:feeds flight_forum_120:Floor_2_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_2_Block_B.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "3218a9d7-0ffa-4cca-9e8d-90a56cd7b69b" ;
+    brick:feeds flight_forum_120:Floor_2_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_2_Block_B.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "e6368aa1-556c-4cf7-b50d-f5e8885e20dd" ;
+    brick:feeds flight_forum_120:Floor_2_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_2_Block_C.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "0e38d78f-4c74-4f1c-8eba-822ce268eddc" ;
+    brick:feeds flight_forum_120:Floor_2_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_2_Block_C.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "90055a59-24b6-4c32-85d0-b4082d15c689" ;
+    brick:feeds flight_forum_120:Floor_2_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_2_Block_D.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "647f7786-66f4-45b9-b557-8d3c1d7473f3" ;
+    brick:feeds flight_forum_120:Floor_2_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_2_Block_D.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "643b04ef-1135-46c7-bd00-d704edad862c" ;
+    brick:feeds flight_forum_120:Floor_2_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_3_Block_A.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "04029217-5985-4461-9bfb-8ee2fe9528bf" ;
+    brick:feeds flight_forum_120:Floor_3_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_3_Block_A.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "3236b2f2-df50-4c24-81f6-3f1f2d661750" ;
+    brick:feeds flight_forum_120:Floor_3_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_3_Block_B.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "9dffe85d-5230-42c8-978f-80bbafa8ab72" ;
+    brick:feeds flight_forum_120:Floor_3_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_3_Block_B.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "f0d1780d-0fec-4fbd-af3c-b3c0599a8e68" ;
+    brick:feeds flight_forum_120:Floor_3_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_3_Block_C.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "cfeb5aba-d689-4233-9c0a-f5fc07d64f75" ;
+    brick:feeds flight_forum_120:Floor_3_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_3_Block_C.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "11565eb6-115a-4d10-9204-fc5026610c12" ;
+    brick:feeds flight_forum_120:Floor_3_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_3_Block_D.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "e24ed76e-ef3e-47ed-9ab0-7eda7129a136" ;
+    brick:feeds flight_forum_120:Floor_3_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_3_Block_D.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "d875afec-9fdf-454a-8798-ad658544e255" ;
+    brick:feeds flight_forum_120:Floor_3_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_4_Block_A.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "4a1e9f27-9278-4a28-847e-b8ac6414afd1" ;
+    brick:feeds flight_forum_120:Floor_4_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_4_Block_A.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "443b026f-e996-4236-9152-e39d9cb2a3e4" ;
+    brick:feeds flight_forum_120:Floor_4_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_4_Block_B.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "04911120-7f81-4a42-8a4a-8363efaec6f3" ;
+    brick:feeds flight_forum_120:Floor_4_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_4_Block_B.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "4a9d4c1c-3c10-4360-8982-7f2e89cab26b" ;
+    brick:feeds flight_forum_120:Floor_4_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_4_Block_C.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "be61d2a6-8213-494a-8d28-6db46c74e6b9" ;
+    brick:feeds flight_forum_120:Floor_4_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_4_Block_C.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "439d479c-78bd-44c9-b3b8-5dcb07684779" ;
+    brick:feeds flight_forum_120:Floor_4_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_4_Block_D.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "a2cc2196-301f-4d00-8fb6-33669041cf40" ;
+    brick:feeds flight_forum_120:Floor_4_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_4_Block_D.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "768d39fb-5c87-4448-9702-11520ffcc9b1" ;
+    brick:feeds flight_forum_120:Floor_4_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_5_Block_A.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "57e92090-743d-4a1b-9fd7-f093775adc8a" ;
+    brick:feeds flight_forum_120:Floor_5_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_5_Block_A.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "37dd8b24-132d-40b2-aa3b-3ac4d87ca975" ;
+    brick:feeds flight_forum_120:Floor_5_Block_A.Fan_Coil_Unit .
+
+flight_forum_120:Floor_5_Block_B.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "92c9f7ba-bf04-4c11-abf7-f19eadadc680" ;
+    brick:feeds flight_forum_120:Floor_5_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_5_Block_B.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "c79e105f-e472-402b-8ade-d5130568a606" ;
+    brick:feeds flight_forum_120:Floor_5_Block_B.Fan_Coil_Unit .
+
+flight_forum_120:Floor_5_Block_C.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "42b51956-767c-4bfa-b32d-23ad88f8c668" ;
+    brick:feeds flight_forum_120:Floor_5_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_5_Block_C.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "71547697-7d7f-4b67-94a3-ee52e1bf2ea9" ;
+    brick:feeds flight_forum_120:Floor_5_Block_C.Fan_Coil_Unit .
+
+flight_forum_120:Floor_5_Block_D.Cooling_Water_Distribution.Cooling_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "482ef916-2323-4815-9061-081338db1008" ;
+    brick:feeds flight_forum_120:Floor_5_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Floor_5_Block_D.Heating_Water_Distribution.Heating_Valve a brick:Cooling_Valve ;
+    brick:TimeseriesUUID "2ac7d8d9-b65f-4b2a-98b0-494302aa804f" ;
+    brick:feeds flight_forum_120:Floor_5_Block_D.Fan_Coil_Unit .
+
+flight_forum_120:Secondary_Cold_Water a brick:Cold_Water_Distribution ;
+    brick:feeds flight_forum_120:Floor_0_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_0_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_0_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_0_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_1_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_1_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_1_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_1_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_2_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_2_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_2_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_2_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_3_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_3_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_3_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_3_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_4_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_4_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_4_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_4_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_5_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_5_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_5_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_5_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_D.Heating_Water_Distribution.Heating_Valve ;
+    brick:isFedBy flight_forum_120:Chiller.1,
+        flight_forum_120:Chiller.2,
+        flight_forum_120:Chiller.3,
+        flight_forum_120:Chiller.4 ;
+    brick:isRegulatedBy flight_forum_120:Secondary_Cold_Water.Heating_Curve .
+
+flight_forum_120:Secondary_Hot_Water a brick:Radiation_Hot_Water_System ;
+    brick:feeds flight_forum_120:Floor_0_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_0_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_0_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_0_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_0_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_1_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_1_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_1_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_1_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_1_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_2_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_2_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_2_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_2_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_2_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_3_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_3_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_3_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_3_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_3_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_4_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_4_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_4_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_4_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_4_Block_D.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_5_Block_A.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_A.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_5_Block_B.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_B.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_5_Block_C.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_C.Heating_Water_Distribution.Heating_Valve,
+        flight_forum_120:Floor_5_Block_D.Cooling_Water_Distribution.Cooling_Valve,
+        flight_forum_120:Floor_5_Block_D.Heating_Water_Distribution.Heating_Valve ;
+    brick:isFedBy flight_forum_120:Primary_Hot_Water.Water_Distribution ;
+    brick:isRegulatedBy flight_forum_120:Secondary_Hot_Water.Heating_Curve .
+
+flight_forum_120:Primary_Cold_Water.1.Return_Temperature_Sensor a brick:Cold_Water_Return_Temperature_Sensor ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Primary_Cold_Water.1.Supply_Temperature_Sensor a brick:Cold_Water_Supply_Temperature_Sensor ;
+    brick:TimeseriesUUID "N/A" .
+
+flight_forum_120:Chiller.1 a brick:Chiller ;
+    brick:hasPart flight_forum_120:Chiller.1.Cold_Water_Pump,
+        flight_forum_120:Primary_Cold_Water.1.Return_Temperature_Sensor,
+        flight_forum_120:Primary_Cold_Water.1.Supply_Temperature_Sensor ;
+    brick:hasPoint flight_forum_120:Chiller.1.Status .
+
+flight_forum_120:Chiller.2 a brick:Chiller ;
+    brick:hasPart flight_forum_120:Chiller.2.Cold_Water_Pump,
+        flight_forum_120:Primary_Cold_Water.1.Return_Temperature_Sensor,
+        flight_forum_120:Primary_Cold_Water.1.Supply_Temperature_Sensor ;
+    brick:hasPoint flight_forum_120:Chiller.2.Status .
+
+flight_forum_120:Chiller.3 a brick:Chiller ;
+    brick:hasPart flight_forum_120:Chiller.3.Cold_Water_Pump,
+        flight_forum_120:Primary_Cold_Water.1.Return_Temperature_Sensor,
+        flight_forum_120:Primary_Cold_Water.1.Supply_Temperature_Sensor ;
+    brick:hasPoint flight_forum_120:Chiller.3.Status .
+
+flight_forum_120:Chiller.4 a brick:Chiller ;
+    brick:hasPart flight_forum_120:Chiller.4.Cold_Water_Pump,
+        flight_forum_120:Primary_Cold_Water.1.Return_Temperature_Sensor,
+        flight_forum_120:Primary_Cold_Water.1.Supply_Temperature_Sensor ;
+    brick:hasPoint flight_forum_120:Chiller.4.Status .
+
+brick:HeatingCurve rdfs:subClassOf brick:Equipment .
+
+flight_forum_120:Floor_0_Block_A a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_0_Block_A_Spectral_Sensor_19 .
+
+flight_forum_120:Floor_0_Block_B a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_0_Block_B_Spectral_Sensor_22 .
+
+flight_forum_120:Floor_0_Block_C a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_0_Block_C_Spectral_Sensor_12 .
+
+flight_forum_120:Floor_0_Block_D a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_0_Block_D_Spectral_Sensor_1 .
+
+flight_forum_120:Floor_1_Block_A a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_1_Block_A_Spectral_Sensor_16 .
+
+flight_forum_120:Floor_1_Block_B a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_1_Block_B_Spectral_Sensor_23 .
+
+flight_forum_120:Floor_1_Block_C a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_1_Block_C_Spectral_Sensor_18 .
+
+flight_forum_120:Floor_1_Block_D a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_1_Block_D_Spectral_Sensor_17 .
+
+flight_forum_120:Floor_2_Block_A a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_2_Block_A_Spectral_Sensor_7 .
+
+flight_forum_120:Floor_2_Block_B a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_2_Block_B_Spectral_Sensor_6 .
+
+flight_forum_120:Floor_2_Block_C a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_2_Block_C_Spectral_Sensor_9 .
+
+flight_forum_120:Floor_2_Block_D a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_2_Block_D_Spectral_Sensor_8 .
+
+flight_forum_120:Floor_3_Block_A a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_3_Block_A_Spectral_Sensor_21 .
+
+flight_forum_120:Floor_3_Block_B a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_3_Block_B_Spectral_Sensor_20 .
+
+flight_forum_120:Floor_3_Block_C a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_3_Block_C_Spectral_Sensor_28 .
+
+flight_forum_120:Floor_3_Block_D a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_3_Block_D_Spectral_Sensor_15 .
+
+flight_forum_120:Floor_4_Block_A a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_4_Block_A_Spectral_Sensor_14,
+        flight_forum_120:Floor_4_Block_A_Spectral_Sensor_26 .
+
+flight_forum_120:Floor_4_Block_B a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_4_Block_B_Spectral_Sensor_13,
+        flight_forum_120:Floor_4_Block_B_Spectral_Sensor_24 .
+
+flight_forum_120:Floor_4_Block_C a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_4_Block_C_Spectral_Sensor_10 .
+
+flight_forum_120:Floor_4_Block_D a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_4_Block_D_Spectral_Sensor_11 .
+
+flight_forum_120:Floor_5_Block_A a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_5_Block_A_Spectral_Sensor_2 .
+
+flight_forum_120:Floor_5_Block_B a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_5_Block_B_Spectral_Sensor_5 .
+
+flight_forum_120:Floor_5_Block_C a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_5_Block_C_Spectral_Sensor_3 .
+
+flight_forum_120:Floor_5_Block_D a brick:Zone ;
+    brick:isLocationOf flight_forum_120:Floor_5_Block_D_Spectral_Sensor_25 .
+
+flight_forum_120:Primary_Hot_Water.Water_Distribution a brick:Water_Distribution ;
+    brick:isRegulatedBy flight_forum_120:Primary_Hot_Water.Water_Distribution.Heating_Curve .
+
+brick:SpectralSensor rdfs:subClassOf brick:Zone_Air_Temperature_Sensor .
+
