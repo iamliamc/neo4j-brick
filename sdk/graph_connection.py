@@ -9,7 +9,7 @@ class TopologyGraphDriver:
         Based on: https://neo4j.com/docs/driver-manual/current/get-started/#driver-get-started-hello-world-example
     """
 
-    brick_version = "1.1"
+    brick_version = "1.3"
     default_uri = "neo4j://localhost:7687"
     logger = logging.getLogger()
 
@@ -92,35 +92,35 @@ class TopologyGraphDriver:
     @staticmethod
     def _get_brick_relationships(tx):
         results = tx.run(
-            'MATCH(n:Resource:Relationship) WHERE n.uri CONTAINS "https://brickschema.org/schema/1.1/Brick#" RETURN n'
+            'MATCH(n:Resource:Relationship) WHERE n.uri CONTAINS "https://brickschema.org/schema/1.3/Brick#" RETURN n'
         )
         return [record["n"] for record in results]
 
     @staticmethod
     def _get_brick_classes(tx):
         results = tx.run(
-            'MATCH(n:Resource:Class) WHERE n.uri CONTAINS "https://brickschema.org/schema/1.1/Brick#" RETURN n'
+            'MATCH(n:Resource:Class) WHERE n.uri CONTAINS "https://brickschema.org/schema/1.3/Brick#" RETURN n'
         )
         return [record["n"] for record in results]
 
     @staticmethod
     def _is_brick_ontology_loaded(tx):
         results = tx.run(
-            'MATCH(n:Resource) where n.uri CONTAINS "https://brickschema.org/schema/1.1/Brick#" RETURN n LIMIT 10'
+            'MATCH(n:Resource) where n.uri CONTAINS "https://brickschema.org/schema/1.3/Brick#" RETURN n LIMIT 10'
         )
         return [record["n"] for record in results]
 
     @staticmethod
     def _load_brick_ontology(tx):
         results = tx.run(
-            'CALL n10s.onto.import.fetch("https://brickschema.org/schema/1.1/Brick.ttl", "Turtle");'
+            'CALL n10s.onto.import.fetch("https://brickschema.org/schema/1.3/Brick.ttl", "Turtle");'
         )
         return results
 
     @staticmethod
     def _create_neosemantics_constraint(tx):
         results = tx.run(
-            "CREATE CONSTRAINT n10s_unique_uri ON (r:Resource) ASSERT r.uri IS UNIQUE"
+            "CREATE CONSTRAINT n10s_unique_uri FOR (r:Resource) REQUIRE r.uri IS UNIQUE"
         )
         return results
 
